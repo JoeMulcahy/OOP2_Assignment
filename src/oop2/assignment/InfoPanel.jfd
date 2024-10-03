@@ -1,0 +1,21 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "fill,hidemode 3,align center center"
+			"$columnConstraints": "[fill]"
+			"$rowConstraints": "[][][][]"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 255, 255, 204, 255 )
+			"maximumSize": new java.awt.Dimension( 200, 800 )
+			"minimumSize": new java.awt.Dimension( 200, 800 )
+			"preferredSize": new java.awt.Dimension( 200, 800 )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

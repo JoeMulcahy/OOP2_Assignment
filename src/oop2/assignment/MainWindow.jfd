@@ -1,0 +1,23 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill]"
+			"$rowConstraints": "[]"
+		} ) {
+			name: "this"
+			"visible": true
+			"minimumSize": new java.awt.Dimension( 620, 850 )
+			"preferredSize": new java.awt.Dimension( 620, 850 )
+			"maximumSize": new java.awt.Dimension( 620, 850 )
+			"title": "Tile Attack"
+			"defaultCloseOperation": 3
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 620, 850 )
+		} )
+	}
+}
