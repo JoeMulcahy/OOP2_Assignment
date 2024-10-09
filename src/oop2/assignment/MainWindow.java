@@ -5,6 +5,11 @@
 package oop2.assignment;
 
 import net.miginfocom.swing.MigLayout;
+import oop2.assignment.gameInformation.DisplayLevel;
+import oop2.assignment.gameInformation.DisplayScore;
+import oop2.assignment.gameInformation.DisplayTimer;
+import oop2.assignment.gameInformation.InfoPanel;
+import oop2.assignment.timing.GameTimer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,11 +21,23 @@ public class MainWindow extends JFrame {
 
     GamePanel pnlGame;
     InfoPanel pnlInfo;
+    GameTimer timer;
+    DisplayLevel displayLevel;
+    DisplayScore displayScore;
+    DisplayTimer displayTimer;
+
     public MainWindow() {
         initComponents();
 
         pnlGame = new GamePanel();
         pnlInfo = new InfoPanel();
+        displayLevel = new DisplayLevel(1);
+        displayScore = new DisplayScore();
+        displayTimer = new DisplayTimer();
+
+        pnlInfo.add(displayLevel, "cell 0 0, grow");
+        pnlInfo.add(displayScore, "cell 0 1, grow");
+        pnlInfo.add(displayTimer, "cell 0 2, grow");
 
         add(pnlGame, "cell 0 0");
         add(pnlInfo, "cell 1 0, grow");

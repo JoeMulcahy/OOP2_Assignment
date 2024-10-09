@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Thu Oct 03 12:11:17 IST 2024
  */
 
-package oop2.assignment;
+package oop2.assignment.gameInformation;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -13,6 +13,8 @@ import java.awt.*;
  * @author josep
  */
 public class InfoPanel extends JPanel {
+
+
     public InfoPanel() {
         initComponents();
     }
@@ -37,6 +39,8 @@ public class InfoPanel extends JPanel {
             "[]"));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
+
+
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // Generated using JFormDesigner non-commercial license

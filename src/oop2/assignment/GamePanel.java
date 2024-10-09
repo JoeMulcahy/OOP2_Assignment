@@ -5,8 +5,13 @@
 package oop2.assignment;
 
 import net.miginfocom.swing.MigLayout;
+import oop2.assignment.gameObjects.GameObject;
+import oop2.assignment.gameObjects.PlayerCursor;
+import oop2.assignment.gameObjects.Tile;
+import oop2.assignment.gameObjects.TileColors;
 import oop2.assignment.grid.GameGrid;
 import oop2.assignment.grid.Grid;
+import oop2.assignment.timing.GameTimer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +22,10 @@ import java.awt.*;
 public class GamePanel extends JPanel {
 
     Grid gameGrid;
+    GameObject testTile;
+    GameObject player;
     Dimension panelDimension;
+    GameTimer timer;
     public GamePanel() {
         initComponents();
         panelDimension = new Dimension(400, 800);
@@ -33,6 +41,10 @@ public class GamePanel extends JPanel {
                 "[]"));
 
         gameGrid = new GameGrid(panelDimension.width, panelDimension.height, 6, 15, 2, true);
+        testTile = new Tile(100, 100, 100, 100, TileColors.RED);
+        player = new PlayerCursor();
+        timer = new GameTimer();
+
         System.out.println("panel width: " + panelDimension.width);
     }
 
@@ -42,6 +54,8 @@ public class GamePanel extends JPanel {
         Graphics2D g = (Graphics2D) graphics;
 
         gameGrid.draw(g);
+        //testTile.draw(g);
+        player.draw(g);
 
         Toolkit.getDefaultToolkit().sync();
         repaint();

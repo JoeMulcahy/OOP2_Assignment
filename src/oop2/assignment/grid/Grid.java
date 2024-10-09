@@ -26,7 +26,7 @@ public abstract class Grid {
          cellHeight = gridHeight / numberOfRows;
     }
 
-     public abstract Graphics2D draw(Graphics2D g);
+     public abstract void draw(Graphics2D g);
 
     public int getGridWidth() {
         return gridWidth;
